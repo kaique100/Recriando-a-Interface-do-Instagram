@@ -1,0 +1,324 @@
+:root{
+    --vermelho:#E50914;
+    --preta:#141414;
+    --branco:#fff;
+    --texto:#8e8e8e;
+    --titulo:#262626;;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instagram-phone img {
+    height: 50rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+
+/* modal */
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease all;
+}
+
+.modal-container.mostrar{
+    display: flex;
+}
+.modal{
+    background: var(--preta);
+    width: 30%;
+    min-width: 300px;
+    padding: 40px;
+    position: relative;
+    /* border: 10px solid; */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.modalRemover{
+    background: var(--branco);
+    width: 30%;
+    height: 28%;
+    min-width: 300px;
+    /* padding: 40px; */
+    position: relative;
+    /* border: 10px solid; */
+    color: var(--texto);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+
+
+    
+
+}
+
+.modalRemover h2{
+    /* position: absolute; */
+    /* margin: auto; */
+    margin: 10% 19% 0% 19%;
+    /* padding: 30% 28%; */
+    color: var(--titulo);
+    
+    text-align: center;
+    /* height: 100px; */
+    /* width: 100px; */
+    /* border: 1px solid #000; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botoesRemover{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonRemover{
+    color: rgba(var(--d69,0,149,246),1);
+    font-weight: 700;
+   width: 100%;
+   /* border-style: groove; */
+
+   background-color: transparent;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #dbdbdb;
+    /* border-top: 1px solidrgba(var(--b6a,219,219,219),1); */
+    cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 48px;
+    padding: 4px 8px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+.botoesRemover button{
+    /* color: rgba(var(--d69,0,149,246),1); */
+    /* font-weight: 700; */
+   width: 100%;
+   /* border-style: groove; */
+
+   background-color: transparent;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #dbdbdb;
+    /* border-top: 1px solidrgba(var(--b6a,219,219,219),1); */
+    cursor: pointer;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 48px;
+    padding: 4px 8px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+
+.modalRemover p{
+    /* position: absolute; */
+    /* margin: auto; */
+    margin: 4% 15% -5% 15%;
+    /* padding: 30% 28%; */
+
+    text-align: center;
+    height: 100px;
+    /* width: 100px; */
+    /* border: 1px solid #000; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+   
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
